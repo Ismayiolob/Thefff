@@ -1,0 +1,3 @@
+﻿  myGame.cpp
+C:\Users\User\source\repos\The final solution\The final solution\myGame.cpp(7,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  The final solution.vcxproj -> C:\Users\User\source\repos\The final solution\x64\Debug\The final solution.exe
