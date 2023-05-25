@@ -1,3 +1,4 @@
-﻿  myGame.cpp
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (The final solution.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  myGame.cpp
 C:\Users\User\source\repos\The final solution\The final solution\myGame.cpp(7,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  The final solution.vcxproj -> C:\Users\User\source\repos\The final solution\x64\Debug\The final solution.exe
+  The final solution.vcxproj -> C:\Users\User\source\repos\The final solution\x64\Debug\Thefinalsolution.exe

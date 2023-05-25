@@ -267,17 +267,19 @@ void EnemyFirstTurn(int* x, int* y, ushort arr[][10], int arr2[][10], int* count
 		int key = rand() % 4 + 1;
 		if (key == 1)
 		{
-			if ((arr[*x][*y] == 1))
+			if (arr2[*x][*y] == 1)
+			{
+				continue;
+			}
+			if (arr2[*x][*y] == 0 && arr[*x][*y] == 0)
 			{
 				arr2[*x][*y] = 1;
-				*count -= 1;
-				system("cls");
 				return;
 			}
-			else if (arr[*x][*y] != 1)
+			else if (arr[*x][*y] == 1 && arr2[*x][*y] == 0)
 			{
-				system("cls");
-				return;
+				*count -= 1;
+				continue;
 			}
 		}
 	}

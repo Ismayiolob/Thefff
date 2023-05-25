@@ -436,21 +436,24 @@ void YourTurn(int* x, int* y, int* key, ushort arr[][10], int arr2[][10], int* c
 		system("cls");
 		if (*key == 'f' || *key == 'F')
 		{
-			if ((arr[*x][*y] == 1))
+			if (arr2[*x][*y] == 1)
 			{
-				if ((arr2[*x][*y] == 0))
-				{
-					*count -= 1;
-					system("cls");
-					continue;
-					return;
-				}
-				else
-					continue;
+				system("cls");
+				continue;
 			}
-			else
+			else if (arr2[*x][*y] == 0 && arr[*x][*y] == 0)
+			{
 				arr2[*x][*y] = 1;
+				system("cls");
 				return;
+			}
+			else if (arr[*x][*y] == 1 && arr2[*x][*y] == 0)
+			{
+				*count -= 1;
+				arr2[*x][*y] = 1;
+				system("cls");
+				continue;
+			}
 		}
 	}
 }

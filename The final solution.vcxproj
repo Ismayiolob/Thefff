@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClInclude Include="EnemyFunctions.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="myFunctions.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="myGame.cpp" />

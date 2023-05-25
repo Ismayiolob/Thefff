@@ -50,28 +50,28 @@ void LoadGame(ushort arr[][10], int ARR[][10], ushort arr2[][10], int ARR2[][10]
 		*PX = 4, * PY = 4;
 		WaitAnimation();
 
-		*PCount = 1, * PEnemyCount = 1;
+		*PCount = 1, * PEnemyCount = 20;
 
 		while (true)
 		{
 			*PX = 4, * PY = 4;
-			YourTurn(PX, PY, PKey, arr2, ARR2, PCount);
-			if (*PCount == 0)
+			YourTurn(PX, PY, PKey, arr, ARR2, PCount);
+			if (*PCount <= 0)
 			{
 				system("cls");
 				cout << "You won";
-				Sleep(500);
+				Sleep(5000);
 				system("cls");
 				return;
 			}
 			WaitAnimation();
 			*PX = 4, * PY = 4;
-			EnemyFirstTurn(PX, PY, arr2, ARR2, PEnemyCount);
-			if (*PEnemyCount == 0)
+			EnemyFirstTurn(PX, PY, arr2, ARR, PEnemyCount);
+			if (*PEnemyCount <= 0)
 			{
 				system("cls");
 				cout << "You lost";
-				Sleep(500);
+				Sleep(5000);
 				system("cls");
 				return;
 			}
@@ -90,10 +90,10 @@ void NewGame(ushort arr[][10], int ARR[][10], ushort arr2[][10], int ARR2[][10],
 	while (*PEnemyCount > 0 && *PCount > 0)
 	{
 		*PX = 4, * PY = 4;
-		YourTurn(PX, PY, PKey, arr2, ARR2, PCount);
+		YourTurn(PX, PY, PKey, arr2, ARR, PCount);
 		WaitAnimation();
 		*PX = 4, * PY = 4;
-		EnemyFirstTurn(PX, PY, arr2, ARR2, PEnemyCount);
+		EnemyFirstTurn(PX, PY, arr, ARR2, PEnemyCount);
 	}
 }
 void Menu(ushort arr[][10], int ARR[][10], ushort arr2[][10], int ARR2[][10], int* PX, int* PY, int* PKey, int* PCount, int* PEnemyCount)
